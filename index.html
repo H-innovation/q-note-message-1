@@ -18,7 +18,6 @@
             gesture-detector
         >
             <a-marker
-                id="animated-marker"
                 type="pattern"
                 preset="custom"
                 url="assets/HermesLogo.patt"
@@ -42,6 +41,55 @@
              
               
             </a-marker>
+
+            <a-marker
+            type="pattern"
+            preset="custom"
+            url="assets/marker.patt"
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+            id="markerB"
+        >
+        <!-- <a-entity geometry="primitive: plane; height: 5; width: 5"                     rotation="-90 0 0"
+        material="shader:gif;src:url(assets/coffee.gif);"></a-entity> -->
+
+            <a-image
+                src="assets/Message2.png"
+                
+                class="clickable"
+                rotation="-90 0 0"
+                position="3 0 -1"
+                gesture-handler
+                scale= "8 8 8"
+            ></a-image>
+         
+          
+        </a-marker>
+            <a-marker
+            type="pattern"
+            preset="custom"
+            url="assets/pacman.patt"
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+            id="markerC"
+        >
+        <!-- <a-entity geometry="primitive: plane; height: 5; width: 5"                     rotation="-90 0 0"
+        material="shader:gif;src:url(assets/coffee.gif);"></a-entity> -->
+
+            <a-image
+                src="assets/Message3.png"
+                
+                class="clickable"
+                rotation="-90 0 0"
+                position="1 0 3"
+                gesture-handler
+                scale= "8 8 8"
+            ></a-image>
+         
+          
+        </a-marker>
 
             <a-entity camera></a-entity>
         </a-scene>
