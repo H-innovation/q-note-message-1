@@ -10,6 +10,11 @@
         <script src="https://unpkg.com/aframe-drag-controls"></script>
 
     </head>
+    <!-- <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js"></script> -->
+
+
+    <script type="text/javascript" src="./events.js"></script>
+
 
     <body style="margin: 0; overflow: hidden;">
         <a-scene
@@ -22,6 +27,7 @@
             gesture-detector
         >
             <a-marker
+            markerhandler
                 type="pattern"
                 preset="custom"
                 url="assets/HermesLogo.patt"
@@ -40,6 +46,7 @@
                     position="-3 0 0"
                     gesture-handler
                     scale= "8 8 8"
+                    id="imageA"
                 ></a-image>
              
               
@@ -64,11 +71,14 @@
                 position="3 0 -1"
                 gesture-handler
                 scale= "8 8 8"
+                id="imageB"
+
             ></a-image>
          
           
         </a-marker>
             <a-marker
+            markerhandler
             type="pattern"
             preset="custom"
             url="assets/pacman.patt"
@@ -87,11 +97,14 @@
                 position="1 0 3"
                 gesture-handler
                 scale= "8 8 8"
+                id="imageC"
+
             ></a-image>
          
           
         </a-marker>
         <a-marker
+        markerhandler
                 type="pattern"
                 preset="custom"
                 url="assets/Q-note-marker.patt"
@@ -110,6 +123,8 @@
                     position="-3 0 0"
                     gesture-handler
                     scale= "8 8 8"
+                    id="imageD"
+
                 ></a-image>
              
               
