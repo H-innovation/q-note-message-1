@@ -24,7 +24,6 @@
             gesture-detector
         >
             <a-marker
-            click-drag
                 type="pattern"
                 preset="custom"
                 url="assets/HermesLogo.patt"
@@ -38,7 +37,6 @@
 
                 <a-image
                     src="assets/Message1.png"
-                    click-drag
                     class="clickable"
                     rotation="-90 0 0"
                     position="-3 0 0"
@@ -50,7 +48,6 @@
             </a-marker>
 
             <a-marker
-            click-drag
             type="pattern"
             preset="custom"
             url="assets/marker.patt"
@@ -64,8 +61,7 @@
 
             <a-image
                 src="assets/Message2.png"
-                click-drag
-                class="clickable"
+                    class="clickable"
                 rotation="-90 0 0"
                 position="3 0 -1"
                 gesture-handler
@@ -75,7 +71,6 @@
           
         </a-marker>
             <a-marker
-            click-drag
             type="pattern"
             preset="custom"
             url="assets/pacman.patt"
@@ -89,8 +84,7 @@
 
             <a-image
                 src="assets/Message3.png"
-                click-drag
-                class="clickable"
+                    class="clickable"
                 rotation="-90 0 0"
                 position="1 0 3"
                 gesture-handler
@@ -114,7 +108,6 @@
 
                 <a-image
                     src="assets/Message1.png"
-                    click-drag
                     class="clickable"
                     rotation="-90 0 0"
                     position="-3 0 0"
@@ -125,7 +118,7 @@
               
             </a-marker>
 
-            <a-entity camera></a-entity>
+            <a-entity camera look-controls-enabled="false"></a-entity>
         </a-scene>
     </body>
 </html>
