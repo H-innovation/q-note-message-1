@@ -1,3 +1,4 @@
+console.log("connected");
 AFRAME.registerComponent("markerhandler", {
 	init: function () {
 		const animatedMarker = document.querySelector("#markerA");
