@@ -5,7 +5,7 @@ AFRAME.registerComponent("markerhandler", {
 		const aEntity = document.querySelector("#imageA");
 
 		// every click, we make our model grow in size :)
-		animatedMarker.addEventListener("click", function (ev, target) {
+		this.el.addEventListener("click", function (ev, target) {
 			alert("item clicked");
 			// const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
 			// if (aEntity && intersectedElement === aEntity) {
