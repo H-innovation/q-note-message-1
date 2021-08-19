@@ -6,10 +6,8 @@
         <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
-        <script src="https://unpkg.com/aframe-click-drag-component"></script> 
-        <script>
-            registerAframeClickDragComponent(window.AFRAME);
-          </script>
+        <script src="https://unpkg.com/aframe"></script>
+        <script src="https://unpkg.com/aframe-drag-controls"></script>
 
     </head>
 
@@ -37,7 +35,7 @@
 
                 <a-image
                     src="assets/Message1.png"
-                    class="clickable"
+    class="draggable"
                     rotation="-90 0 0"
                     position="-3 0 0"
                     gesture-handler
@@ -61,7 +59,7 @@
 
             <a-image
                 src="assets/Message2.png"
-                    class="clickable"
+    class="draggable"
                 rotation="-90 0 0"
                 position="3 0 -1"
                 gesture-handler
@@ -84,7 +82,7 @@
 
             <a-image
                 src="assets/Message3.png"
-                    class="clickable"
+    class="draggable"
                 rotation="-90 0 0"
                 position="1 0 3"
                 gesture-handler
@@ -107,7 +105,7 @@
 
                 <a-image
                     src="assets/Message1.png"
-                    class="clickable"
+    class="draggable"
                     rotation="-90 0 0"
                     position="-3 0 0"
                     gesture-handler
@@ -117,7 +115,8 @@
               
             </a-marker>
 
-            <a-entity camera look-controls ="enabled: false"></a-entity>
+            <a-entity camera   drag-controls="objects: .draggable"
+            look-controls></a-entity>
         </a-scene>
     </body>
 </html>
