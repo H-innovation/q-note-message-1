@@ -6,19 +6,10 @@
         <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
-        <!-- <script src="https://unpkg.com/aframe"></script>
-        <script src="https://unpkg.com/aframe-drag-controls"></script>
-
-        <script type="text/javascript" src="events.js"></script> -->
     </head>
-    <!-- <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js"></script> -->
-
-
-
 
     <body style="margin: 0; overflow: hidden;">
         <a-scene
-        
             vr-mode-ui="enabled: false;"
             loading-screen="enabled: false;"
             arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
@@ -27,7 +18,6 @@
             gesture-detector
         >
             <a-marker
-            markerhandler
                 type="pattern"
                 preset="custom"
                 url="assets/HermesLogo.patt"
@@ -41,11 +31,12 @@
 
                 <a-image
                     src="assets/Message1.png"
+                    
+                    class="clickable"
                     rotation="-90 0 0"
                     position="0 0 0"
                     gesture-handler
                     scale= "8 8 8"
-                    id="imageA"
                 ></a-image>
              
               
@@ -65,18 +56,17 @@
 
             <a-image
                 src="assets/Message2.png"
+                
+                class="clickable"
                 rotation="-90 0 0"
                 position="0 0 0"
                 gesture-handler
                 scale= "8 8 8"
-                id="imageB"
-
             ></a-image>
          
           
         </a-marker>
             <a-marker
-            markerhandler
             type="pattern"
             preset="custom"
             url="assets/pacman.patt"
@@ -90,44 +80,18 @@
 
             <a-image
                 src="assets/Message3.png"
+                
+                class="clickable"
                 rotation="-90 0 0"
                 position="0 0 0"
                 gesture-handler
                 scale= "8 8 8"
-                id="imageC"
-
             ></a-image>
          
           
         </a-marker>
-        <a-marker
-        markerhandler
-                type="pattern"
-                preset="custom"
-                url="assets/Q-note-marker.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerD"
-            >
-            <!-- <a-entity geometry="primitive: plane; height: 5; width: 5"                     rotation="-90 0 0"
-            material="shader:gif;src:url(assets/coffee.gif);"></a-entity> -->
 
-                <a-image
-                    src="assets/Message1.png"
-                    rotation="-90 0 0"
-                    position="0 0 0"
-                    gesture-handler
-                    scale= "8 8 8"
-                    id="imageD"
-
-                ></a-image>
-             
-              
-            </a-marker>
-
-            <a-entity camera  
-            look-controls></a-entity>
+            <a-entity camera></a-entity>
         </a-scene>
     </body>
 </html>
